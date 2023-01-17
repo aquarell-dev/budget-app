@@ -6,7 +6,6 @@ import './styles/tailwind.css'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 	<React.StrictMode>
-		<p>123</p>
 		<App />
 	</React.StrictMode>
 )
