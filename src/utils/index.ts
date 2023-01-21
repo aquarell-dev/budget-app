@@ -75,3 +75,11 @@ export const nth = function (day: number) {
 			return 'th'
 	}
 }
+
+export const getStateFromLocalStorage = <T = any>(key: string): T | null => {
+	const item = localStorage.getItem(key)
+
+	if (!item) return null
+
+	return JSON.parse(item) as T
+}
