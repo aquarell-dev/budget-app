@@ -14,7 +14,7 @@ export type Page = {
 
 export const links: Page[] = [
 	{
-		id: 2,
+		id: 1,
 		title: 'Dashboard',
 		path: '/',
 		icon: (
@@ -25,7 +25,7 @@ export const links: Page[] = [
 		),
 	},
 	{
-		id: 3,
+		id: 2,
 		title: 'Analysis',
 		path: '/analysis',
 		icon: (
@@ -36,7 +36,7 @@ export const links: Page[] = [
 		),
 	},
 	{
-		id: 4,
+		id: 3,
 		title: 'Settings',
 		path: '/settings',
 		icon: (

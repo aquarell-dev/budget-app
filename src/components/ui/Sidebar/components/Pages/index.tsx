@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 import { links } from './links'
 
 const Pages: FC = () => {
-	const [activePage, setActivePage] = useState<number | null>(null)
+	const [activePage, setActivePage] = useState<number>(1)
 	const navigate = useNavigate()
 
 	return (
