@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import Theme from '../Theme'
 
 const User: FC = () => {
 	return (
@@ -12,6 +13,7 @@ const User: FC = () => {
 						<p className='text-gray-500 text-xs'>Active Now</p>
 					</div>
 				</div>
+				<Theme />
 			</div>
 		</div>
 	)
