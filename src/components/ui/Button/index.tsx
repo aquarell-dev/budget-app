@@ -15,7 +15,7 @@ export const BlackBorderedButton: FC<ButtonProps> = ({
 	return (
 		<button
 			className={cn(
-				'px-4 py-2 font-medium border border-black hover:bg-gray-100 cursor-pointer transition duration-300 ease-in-out flex items-center justify-center',
+				'px-4 py-2 font-medium border dark:bg-zinc-900 border-black hover:bg-gray-100 dark:hover:bg-zinc-800 cursor-pointer component-transition flex items-center justify-center',
 				additionalStyles
 			)}
 			{...buttonProps}

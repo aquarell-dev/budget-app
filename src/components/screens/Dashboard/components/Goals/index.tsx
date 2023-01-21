@@ -37,7 +37,7 @@ const Goals: FC = () => {
 						fontWeight: 500,
 						marginRight: '10px',
 					}}
-					iconAdditionalClassName='cursor-pointer hover:bg-gray-100 transition duration-300 ease-in-out'
+					iconAdditionalClassName='cursor-pointer dark:bg-dark-secondary hover:bg-gray-100 dark:hover:bg-dark-hover-secondary component-transition'
 				>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
@@ -57,7 +57,10 @@ const Goals: FC = () => {
 			</div>
 			<div className='flex space-x-4 overflow-x-auto'>
 				{goals.map(goal => (
-					<Goal {...goal} />
+					<Goal
+						key={goal.id}
+						{...goal}
+					/>
 				))}
 			</div>
 		</div>

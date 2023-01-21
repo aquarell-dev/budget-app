@@ -5,7 +5,7 @@ import Icon from '../../../../ui/Icon'
 
 const Goal: FC<TGoal> = goal => {
 	return (
-		<div className='w-48 h-48 bg-[#f8faf7] shadow-md p-4 flex flex-col justify-between'>
+		<div className='w-48 h-48 bg-[#f8faf7] dark:bg-dark-secondary shadow-md p-4 flex flex-col justify-between'>
 			<div className='flex flex-col space-y-0.5'>
 				<Icon
 					title={goal.goal}

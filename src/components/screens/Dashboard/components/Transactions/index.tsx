@@ -13,7 +13,7 @@ const Transactions: FC<{
 				<h1 className='font-medium text-xl'>{title}</h1>
 				<BlackBorderedButton>New Transaction</BlackBorderedButton>
 			</div>
-			<div className='grid grid-cols-1 min-w-[750px] w-full gap-y-4 rounded-md shadow-xl p-4 border'>
+			<div className='grid grid-cols-1 min-w-[750px] dark:bg-dark-secondary dark:border-transparent w-full gap-y-4 rounded-md shadow-xl p-4 border'>
 				<TransactionHeaders />
 				{transactions.map(transaction => (
 					<Transaction

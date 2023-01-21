@@ -13,7 +13,7 @@ const BankCard: FC<TBankCard> = ({
 	lastFourDigigts,
 }) => {
 	return (
-		<div className='w-96 mx-auto h-48 rounded-xl shadow-xl bg-[#0e1511] text-white p-4'>
+		<div className='w-96 mx-auto h-48 rounded-xl shadow-xl bg-[#0e1511] dark:bg-dark-secondary text-white p-4'>
 			<p className='font-medium text-xl'>{cardHolder}</p>
 			<div className='flex flex-col space-y-1 my-4'>
 				<DottedCardNumber lastFourDigits={String(lastFourDigigts).split('')} />

@@ -22,7 +22,7 @@ const Pages: FC = () => {
 							{
 								'text-[#fefefe] bg-[#3e554c] font-medium':
 									activePage === link.id,
-								'text-gray-400 hover:bg-[#36453f] transition duration-300 ease-in-out':
+								'text-gray-400 hover:bg-[#36453f] component-transition':
 									activePage !== link.id,
 							}
 						)}

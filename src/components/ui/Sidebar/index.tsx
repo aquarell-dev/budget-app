@@ -8,7 +8,7 @@ import User from './components/User'
 const Sidebar: FC = () => {
 	return (
 		<div
-			className='fixed w-[350px] top-0 min-h-screen'
+			className='fixed w-[350px] top-0 min-h-screen shadow-xl'
 			style={{ backgroundColor: '#0e1511' }}
 		>
 			<SidebarContainer>

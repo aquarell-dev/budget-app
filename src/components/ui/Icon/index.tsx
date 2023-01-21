@@ -20,7 +20,7 @@ const Icon: FC<IconProps> = props => {
 		>
 			<div
 				className={cn(
-					'h-6 w-6 bg-[#f7fbfa] border rounded-full flex items-center justify-center',
+					'h-6 w-6 bg-[#f7fbfa] border dark:border-transparent rounded-full flex items-center justify-center',
 					props?.iconAdditionalClassName
 				)}
 				style={{

@@ -5,7 +5,7 @@ import { formatMoney, nth } from '../../../../../utils'
 const MonthlySubscription: FC<Subscription> = subscription => {
 	return (
 		<div
-			className='rounded-xl shadow-2xl border h-48 w-48 p-2 flex items-center flex-col justify-center'
+			className='rounded-xl shadow-md dark:bg-dark-secondary dark:border-transparent border h-48 w-48 p-2 flex items-center flex-col justify-center'
 			style={{ flex: '0 0 auto' }}
 		>
 			<img

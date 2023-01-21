@@ -9,7 +9,7 @@ const Arrow: FC<
 	return (
 		<div
 			className={cn(
-				'absolute top-1/2 -mx-12 -translate-y-1/2 w-8 h-8 rounded-full shadow-lg bg-white flex items-center justify-center hover:bg-gray-100 transition duration-300 ease-in-out cursor-pointer',
+				'absolute top-1/2 -mx-12 -translate-y-1/2 w-8 h-8 rounded-full shadow-lg bg-white dark:bg-dark-secondary flex items-center justify-center hover:bg-gray-100 dark:hover:bg-dark-hover-secondary component-transition cursor-pointer',
 				arrowDirection === 'left' ? 'right-0' : 'left-0'
 			)}
 		>
@@ -19,7 +19,7 @@ const Arrow: FC<
 				viewBox='0 0 24 24'
 				strokeWidth={1.5}
 				stroke='currentColor'
-				className='w-6 h-6 text-black'
+				className='w-6 h-6'
 				onClick={onClick}
 			>
 				{children}
