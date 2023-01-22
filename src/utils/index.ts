@@ -46,9 +46,7 @@ export const formatMoney = (moneyAmount: number) =>
 
 export const formatDateTime = (
 	date: Date,
-	options?: Intl.DateTimeFormatOptions
-) =>
-	new Intl.DateTimeFormat('en-GB', {
+	options: Intl.DateTimeFormatOptions = {
 		weekday: 'long',
 		year: 'numeric',
 		month: 'long',
@@ -56,8 +54,8 @@ export const formatDateTime = (
 		hour: 'numeric',
 		minute: 'numeric',
 		hour12: false,
-		...options,
-	}).format(date)
+	}
+) => new Intl.DateTimeFormat('en-GB', options).format(date)
 
 export const cn = (...classes: (string | undefined)[]) =>
 	classes.filter(Boolean).join(' ')
