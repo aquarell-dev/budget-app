@@ -17,3 +17,14 @@ body {
 	min-height: 100vh;
 	box-sizing: border-box;
 }
+
+@font-face {
+	font-family: 'Montserrat-Alt1';
+	font-weight: 300;
+	font-style: normal;
+	src: url('../assets/fonts/brand-name/MontserratAlt1-Light.woff2')
+			format('woff2'),
+		url('../assets/fonts/brand-name/MontserratAlt1-Light.woff') format('woff'),
+		url('../assets/fonts/brand-name/MontserratAlt1-Light.ttf')
+			format('truetype');
+}
