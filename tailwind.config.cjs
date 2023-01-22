@@ -9,6 +9,9 @@ module.exports = {
 				'dark-secondary': '#18181b',
 				'dark-hover-secondary': '#27272a',
 			},
+			screens: {
+				'slider-mobile': '900px',
+			},
 		},
 	},
 	plugins: [],

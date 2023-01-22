@@ -37,6 +37,28 @@ const CardsSlider: FC<{ cards: TBankCard[] }> = ({ cards }) => {
 		arrows: true,
 		prevArrow: <LeftArrow onClick={() => sliderRef.current?.slickPrev()} />,
 		nextArrow: <RightArrow onClick={() => sliderRef.current?.slickNext()} />,
+		responsive: [
+			{
+				breakpoint: 1700,
+				settings: {
+					slidesToShow: 2,
+				},
+			},
+			{
+				breakpoint: 1280,
+				settings: {
+					slidesToShow: 1,
+					arrows: false,
+				},
+			},
+			{
+				breakpoint: 900,
+				settings: {
+					slidesToShow: 1,
+					arrows: false,
+				},
+			},
+		],
 	}
 
 	return (
