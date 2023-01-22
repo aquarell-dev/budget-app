@@ -11,8 +11,10 @@ module.exports = {
 			},
 			screens: {
 				'slider-mobile': '900px',
+				'3xl': '1720px',
+				usm: '480px',
 			},
 		},
 	},
-	plugins: [],
+	plugins: [require('tailwind-scrollbar')],
 }
