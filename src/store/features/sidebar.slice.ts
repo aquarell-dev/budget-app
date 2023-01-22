@@ -7,6 +7,9 @@ export const sidebarSlice = createSlice({
 		toggleExpanded: state => {
 			state.expanded = !state.expanded
 		},
+		closeSidebar: state => {
+			state.expanded = false
+		},
 	},
 })
 
