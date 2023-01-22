@@ -22,15 +22,8 @@ const Dashboard: FC = () => {
 			<PageHeader>Dashboard</PageHeader>
 			<Greeting />
 			<CardsSlider cards={cards} />
-			<div
-				style={{
-					display: 'grid',
-					margin: '50px 0',
-					gridTemplateColumns: '1fr 2fr',
-					width: '100%',
-				}}
-			>
-				<div className='w-96 flex flex-col space-y-8'>
+			<div className='grid my-12 grid-cols-1 2xl:grid-cols-[1fr_2fr] gap-8'>
+				<div className='flex flex-col space-y-8'>
 					<Balance amount={24500} />
 					<div className='flex items-center space-x-2'>
 						<BlackBorderedButton additionalStyles='w-full'>
@@ -50,13 +43,13 @@ const Dashboard: FC = () => {
 						statistics={spendings}
 					/>
 				</div>
-				<div className='w-full flex flex-col space-y-8'>
+				<div className='flex flex-col space-y-8'>
 					<Goals />
-					<Subscriptions />
 					<Transactions
 						title='Transaction History'
 						transactions={transactions}
 					/>
+					<Subscriptions />
 				</div>
 			</div>
 		</>
