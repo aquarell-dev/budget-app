@@ -1,14 +1,19 @@
-import { FC } from 'react'
+import { FC, useRef } from 'react'
 import { useActions } from '../../../hooks/useActions'
+import { useOutside } from '../../../hooks/useOutside'
 import { useTypedSelector } from '../../../hooks/useTypedSelector'
 import { cn } from '../../../utils'
 import SidebarContainer from './components/SidebarContainer'
 import SidebarContent from './components/SidebarContent'
 
 const Sidebar: FC = () => {
+	const ref = useRef(null)
+
 	const expanded = useTypedSelector(state => state.sidebar.expanded)
 
-	const { toggleExpanded } = useActions()
+	const { toggleExpanded, closeSidebar } = useActions()
+
+	useOutside(ref, () => expanded && closeSidebar())
 
 	return (
 		<div
@@ -17,6 +22,7 @@ const Sidebar: FC = () => {
 				!expanded ? '-translate-x-full md:translate-x-0' : ''
 			)}
 			style={{ backgroundColor: '#0e1511' }}
+			ref={ref}
 		>
 			<SidebarContainer>
 				<div className='block md:hidden'>

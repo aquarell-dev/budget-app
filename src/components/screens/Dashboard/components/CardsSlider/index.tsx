@@ -8,6 +8,7 @@ import { BankCard as TBankCard } from '../../../../../types/banking.types'
 import { cn } from '../../../../../utils'
 import BankCard from '../BankCard'
 import { LeftArrow, RightArrow } from '../SliderArrows'
+import './black-theme-dots.css'
 
 const CardsSlider: FC<{ cards: TBankCard[] }> = ({ cards }) => {
 	const sliderRef = useRef<Slider>(null)
@@ -20,19 +21,21 @@ const CardsSlider: FC<{ cards: TBankCard[] }> = ({ cards }) => {
 		pauseOnDotsHover: true,
 		appendDots: dots => (
 			<div className='dots'>
-				<div className='flex items-center justify-center [&>li]:flex [&>li]:items-center [&>li]:justify-center'>
+				<div
+					className={cn(
+						'flex items-center justify-center [&>li]:flex [&>li]:items-center [&>li]:justify-center',
+						'[&>li.slick-active>.dot]:bg-black [&>li>.dot]:bg-zinc-400',
+						'dark:[&>li.slick-active>.dot]:bg-white dark:[&>li>.dot]:bg-gray-500'
+					)}
+				>
 					{dots}
 				</div>
 			</div>
 		),
 		customPaging: () => (
-			<div
-				className={cn(
-					'w-2 h-2 rounded-full bg-black hover:bg-zinc-600 dark:bg-white dark:hover:bg-gray-400 component-transition'
-				)}
-			/>
+			<div className='dot w-2 h-2 rounded-full component-transition hover:bg-red-600' />
 		),
-		infinite: false,
+		infinite: true,
 		swipe: true,
 		arrows: true,
 		prevArrow: <LeftArrow onClick={() => sliderRef.current?.slickPrev()} />,
