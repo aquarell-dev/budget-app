@@ -3,7 +3,7 @@ import { formatMoney } from '../../../utils'
 import { categories } from '../../../utils/exmaple.data'
 import BarChart from '../../ui/BarChart'
 import DonutProgressBar from '../../ui/DonutProgressBar'
-import PageHeader from '../../ui/PageHeader'
+import Header from '../../ui/Header'
 
 const labels = [
 	'Jan',
@@ -22,7 +22,7 @@ const labels = [
 const Analysis: FC = () => {
 	return (
 		<>
-			<PageHeader>Analysis</PageHeader>
+			<Header pageTitle='Analytics' />
 			<div className='grid grid-cols-2 gap-x-8'>
 				<BarChart
 					title='Income'

@@ -8,7 +8,7 @@ const PageHeader: FC<{ children: ReactNode }> = ({ children }) => {
 	const { toggleExpanded } = useActions()
 
 	return (
-		<div className='flex items-center w-full justify-between mb-8'>
+		<div className='flex items-center w-full justify-between'>
 			<h1 className='text-slate-800 dark:text-white text-3xl font-semibold'>
 				{children}
 			</h1>

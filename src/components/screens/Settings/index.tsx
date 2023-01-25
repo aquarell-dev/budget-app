@@ -1,7 +1,12 @@
 import { FC } from 'react'
+import Header from '../../ui/Header'
 
 const Settings: FC = () => {
-	return <div>Settings</div>
+	return (
+		<>
+			<Header pageTitle='Settings' />
+		</>
+	)
 }
 
 export default Settings

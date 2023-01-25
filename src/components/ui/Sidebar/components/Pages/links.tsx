@@ -26,8 +26,8 @@ export const links: Page[] = [
 	},
 	{
 		id: 2,
-		title: 'Analysis',
-		path: '/analysis',
+		title: 'Analytics',
+		path: '/analytics',
 		icon: (
 			<TiChartArea
 				color='inherit'

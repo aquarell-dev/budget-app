@@ -2,12 +2,15 @@ import classNames from 'classnames'
 
 import { FC, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useActions } from '../../../../../hooks/useActions'
 
 import { links } from './links'
 
 const Pages: FC = () => {
 	const [activePage, setActivePage] = useState<number>(1)
 	const navigate = useNavigate()
+
+	const { closeSidebar } = useActions()
 
 	return (
 		<div className='mt-8'>
@@ -30,6 +33,7 @@ const Pages: FC = () => {
 						onClick={() => {
 							setActivePage(link.id)
 							navigate(link.path)
+							closeSidebar()
 						}}
 					>
 						<div className='w-6 h-6'>{link?.icon}</div>
