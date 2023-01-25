@@ -23,7 +23,7 @@ const App = () => {
 							element={<Dashboard />}
 						/>
 						<Route
-							path='/analysis'
+							path='/analytics'
 							element={<Analysis />}
 						/>
 						<Route
