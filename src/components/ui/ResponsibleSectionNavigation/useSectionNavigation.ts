@@ -1,7 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
 import { Responsive } from './navigation.types'
 
-const useSectionNavigation = (responsive?: Responsive[]) => {
+const useSectionNavigation = (
+	responsive?: Responsive[],
+	shouldBeFixed?: boolean
+) => {
 	const [active, setActive] = useState(0)
 
 	const [sectionSettings, setSectionSettings] = useState<Responsive>({
@@ -44,7 +47,7 @@ const useSectionNavigation = (responsive?: Responsive[]) => {
 				sectionWidth: ref.current.clientWidth,
 			})
 		}
-	}, [ref.current?.clientWidth])
+	}, [ref.current?.clientWidth, shouldBeFixed])
 
 	return { ref, active, setActive, sectionSettings }
 }
