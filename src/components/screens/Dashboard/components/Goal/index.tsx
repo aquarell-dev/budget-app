@@ -16,7 +16,7 @@ const Goal: FC<TGoal> = goal => {
 						fontSize: '1.25rem',
 						fontWeight: 500,
 						textOverflow: 'ellipsis',
-						overflowX: 'hidden',
+						overflow: 'hidden',
 						whiteSpace: 'nowrap',
 					}}
 				/>
