@@ -24,10 +24,9 @@ const Dashboard: FC = () => {
 				pageTitle='Dashboard'
 				navigation={{
 					sections: [
-						{ title: 'cards' },
-						{ title: 'statistics', short: 'stats' },
-						{ title: 'transactions', short: 'deals' },
-						{ title: 'subscriptions', short: 'subs' },
+						{ title: 'cards', scrollId: 'cards' },
+						{ title: 'statistics', short: 'stats', scrollId: 'statistics' },
+						{ title: 'transactions', short: 'deals', scrollId: 'transactions' },
 					],
 					responsive: [
 						{
@@ -51,7 +50,6 @@ const Dashboard: FC = () => {
 				}}
 			/>
 			<Greeting />
-			<div id='cards' />
 			<CardsSlider cards={cards} />
 			<div className='grid my-12 grid-cols-1 2xl:grid-cols-[1fr_2fr] gap-8'>
 				<div className='flex flex-col space-y-8'>
@@ -65,7 +63,6 @@ const Dashboard: FC = () => {
 						</BlackBorderedButton>
 					</div>
 					<StatisticProgressBars />
-					<div id='statistics' />
 					<TransactionStatistics
 						title='Income Statistic'
 						statistics={earnings}
@@ -77,12 +74,10 @@ const Dashboard: FC = () => {
 				</div>
 				<div className='flex flex-col space-y-8'>
 					<Goals />
-					<div id='transactions' />
 					<Transactions
 						title='Transaction History'
 						transactions={transactions}
 					/>
-					<div id='subscriptions' />
 					<Subscriptions />
 				</div>
 			</div>

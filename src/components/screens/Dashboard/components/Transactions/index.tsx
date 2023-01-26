@@ -8,7 +8,10 @@ const Transactions: FC<{
 	transactions: TTransaction[]
 }> = ({ title, transactions }) => {
 	return (
-		<div className='flex flex-col space-y-2'>
+		<div
+			className='flex flex-col space-y-2'
+			id='transactions'
+		>
 			<div className='flex space-x-4 items-center'>
 				<h1 className='font-medium text-xl'>{title}</h1>
 				<BlackBorderedButton>New Transaction</BlackBorderedButton>

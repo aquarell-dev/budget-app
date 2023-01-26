@@ -65,7 +65,10 @@ const CardsSlider: FC<{ cards: TBankCard[] }> = ({ cards }) => {
 	}
 
 	return (
-		<div className='mb-8 mt-4'>
+		<div
+			className='mb-8 mt-4'
+			id='cards'
+		>
 			<h3 className='my-2 font-medium text-2xl'>My Cards</h3>
 			<div className='w-11/12 mx-auto'>
 				<Slider

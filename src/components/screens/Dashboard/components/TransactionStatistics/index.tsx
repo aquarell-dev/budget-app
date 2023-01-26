@@ -18,7 +18,10 @@ const TransactionStatistics = <T extends StatisticItem = StatisticItem>(props: {
 	const totalSpent: number = 4000
 
 	return (
-		<div className='flex flex-col space-y-4 p-4 dark:bg-dark-secondary border dark:border-transparent shadow-xl rounded-md'>
+		<div
+			className='flex flex-col space-y-4 p-4 dark:bg-dark-secondary border dark:border-transparent shadow-xl rounded-md'
+			id='statistics'
+		>
 			<h3 className='font-medium text-2xl'>
 				<p>{title}</p>
 			</h3>
