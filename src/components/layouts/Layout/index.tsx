@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import { Outlet } from 'react-router-dom'
 import Container from '../../ui/Container'
+import ScrollToTop from '../../ui/ScrollToTop'
 import Sidebar from '../../ui/Sidebar'
 
 const Layout: FC = () => {
@@ -10,6 +11,7 @@ const Layout: FC = () => {
 			<Container>
 				<Outlet />
 			</Container>
+			<ScrollToTop />
 		</div>
 	)
 }
