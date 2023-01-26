@@ -10,7 +10,7 @@ export type Responsive = {
 export type Section = {
 	title: string
 	short?: string
-	scrollId?: string
+	scrollId: string
 }
 
 export type ResponsibleSectionNavigationProps = {
