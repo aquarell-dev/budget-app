@@ -14,7 +14,7 @@ const Icon: FC<IconProps> = props => {
 	return (
 		<div
 			className={cn(
-				'flex items-center space-x-1',
+				'flex items-center space-x-1 w-full overflow-hidden',
 				props.reveresed ? 'flex-row-reverse' : 'flex-row'
 			)}
 		>
