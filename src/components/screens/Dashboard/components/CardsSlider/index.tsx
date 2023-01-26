@@ -8,7 +8,7 @@ import { BankCard as TBankCard } from '../../../../../types/banking.types'
 import { cn } from '../../../../../utils'
 import BankCard from '../BankCard'
 import { LeftArrow, RightArrow } from '../SliderArrows'
-import './black-theme-dots.css'
+// import './black-theme-dots.css'
 
 const CardsSlider: FC<{ cards: TBankCard[] }> = ({ cards }) => {
 	const sliderRef = useRef<Slider>(null)
@@ -25,7 +25,7 @@ const CardsSlider: FC<{ cards: TBankCard[] }> = ({ cards }) => {
 					className={cn(
 						'flex items-center justify-center [&>li]:flex [&>li]:items-center [&>li]:justify-center',
 						'[&>li.slick-active>.dot]:bg-black [&>li>.dot]:bg-zinc-400',
-						'dark:[&>li.slick-active>.dot]:bg-white dark:[&>li>.dot]:bg-gray-500'
+						'dark:[&>li.slick-active>.dot]:bg-gray-100 dark:[&>li>.dot]:bg-gray-500'
 					)}
 				>
 					{dots}
@@ -33,7 +33,7 @@ const CardsSlider: FC<{ cards: TBankCard[] }> = ({ cards }) => {
 			</div>
 		),
 		customPaging: () => (
-			<div className='dot w-2 h-2 rounded-full component-transition hover:bg-red-600' />
+			<div className='dot w-2 h-2 rounded-full component-transition' />
 		),
 		infinite: true,
 		swipe: true,

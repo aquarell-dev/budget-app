@@ -39,7 +39,7 @@ const ResponsibleSectionNavigation: FC<
 							window.scrollTo({
 								top:
 									element?.getBoundingClientRect().top + window.scrollY - 150,
-								behavior: 'smooth',
+								// behavior: 'smooth',
 							})
 					}}
 					style={{

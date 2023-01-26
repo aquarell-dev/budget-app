@@ -25,7 +25,7 @@ const useSectionObeserver = (
 	}
 
 	const io = new IntersectionObserver(ioCallback, {
-		threshold: 1,
+		threshold: 0.5,
 	})
 
 	useEffect(() => {
