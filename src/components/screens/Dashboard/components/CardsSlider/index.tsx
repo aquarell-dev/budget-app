@@ -8,7 +8,6 @@ import { BankCard as TBankCard } from '../../../../../types/banking.types'
 import { cn } from '../../../../../utils'
 import BankCard from '../BankCard'
 import { LeftArrow, RightArrow } from '../SliderArrows'
-// import './black-theme-dots.css'
 
 const CardsSlider: FC<{ cards: TBankCard[] }> = ({ cards }) => {
 	const sliderRef = useRef<Slider>(null)

@@ -1,3 +1,4 @@
+import { LoadingComponentProps } from '../../../../../types/mutual.component.types'
 import { Category } from '../../../../../types/mutual.types'
 import { formatMoney } from '../../../../../utils'
 import Icon from '../../../../ui/Icon'
@@ -9,11 +10,13 @@ type StatisticItem = {
 	amount: number
 }
 
-const TransactionStatistics = <T extends StatisticItem = StatisticItem>(props: {
-	title: string
-	statistics: T[]
-}): JSX.Element => {
-	const { title, statistics } = props
+const TransactionStatistics = <T extends StatisticItem = StatisticItem>(
+	props: {
+		title: string
+		statistics: T[]
+	} & LoadingComponentProps
+): JSX.Element => {
+	const { title, statistics, loading } = props
 
 	const totalSpent: number = 4000
 

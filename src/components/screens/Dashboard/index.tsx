@@ -46,6 +46,8 @@ const navigation: ResponsibleSectionNavigationProps = {
 }
 
 const Dashboard: FC = () => {
+	const loading = true
+
 	return (
 		<>
 			<Header
@@ -59,7 +61,10 @@ const Dashboard: FC = () => {
 					className='flex flex-col space-y-8'
 					id='statistics'
 				>
-					<Balance amount={24500} />
+					<Balance
+						amount={24500}
+						loading={loading}
+					/>
 					<div className='flex items-center space-x-2'>
 						<BlackBorderedButton additionalStyles='w-full'>
 							New Income
